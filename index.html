@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Desarrollo Web - Landing Pages Profesionales 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Efecto Parallax Responsivo */
+        .hero-section {
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+                min-height: 50vh;
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.85) 100%);
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .highlight-box {
+            border: 2px solid #3b82f6;
+            background-color: #eff6ff;
+        }
+
+        .warning-box {
+            border: 1px solid #eab308;
+            background-color: #fefce8;
+        }
+
+        @media print {
+            .hero-section {
+                background-attachment: scroll;
+                min-height: auto;
+                padding: 40px 0;
+            }
+
+            .hero-overlay {
+                background: #1e293b !important;
+            }
+
+            button {
+                display: none !important;
+            }
+
+            .card-hover {
+                transform: none !important;
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Hero Section con Imagen Fixed -->
+    <header class="hero-section text-white px-4 md:px-6">
+        <div class="hero-overlay"></div>
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                Propuesta de Presencia Digital <span class="text-blue-400">2026</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                Estrategia integral de desarrollo para Ingeniería Eléctrica y Odontología.
+            </p>
+            <div
+                class="mt-8 inline-block bg-blue-600 px-6 py-2 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest shadow-lg">
+                Innovación y Visibilidad garantizada
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+
+        <!-- Punto Clave: Indexación Google -->
+        <section class="mb-12 highlight-box p-6 md:p-10 rounded-3xl shadow-sm border-l-8 border-blue-600">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="text-blue-600 text-6xl">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl md:text-2xl font-bold text-blue-900 mb-2 uppercase tracking-wide">Punto Clave:
+                        Visibilidad en Google 2026</h3>
+                    <p class="text-blue-800 text-base md:text-lg">
+                        Integramos el servicio de <strong>Indexación mediante Google Search Console</strong>. No solo
+                        creamos la web, aseguramos que Google la rastree y posicione para que sus clientes lo encuentren
+                        hoy mismo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+
+            <!-- Ingeniero Eléctrico -->
+            <article
+                class="bg-white p-6 md:p-8 rounded-3xl shadow-lg border-t-8 border-blue-600 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center mb-6 text-blue-600">
+                        <i class="fas fa-bolt text-4xl mr-4"></i>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Ingeniería Eléctrica</h2>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic border-l-4 border-gray-100 pl-4">Enfoque en autoridad técnica,
+                        precisión y portafolio industrial.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Perfil profesional y certificaciones 2026.</span>
+                        </li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Galería de proyectos de alta ingeniería.</span>
+                        </li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Botón de WhatsApp para contacto directo.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-gray-50 flex justify-between items-end">
+                    <div>
+                        <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest block">Inversión
+                            Desarrollo</span>
+                        <div class="text-sm text-gray-400 line-through">$800.000</div>
+                        <div class="text-3xl font-bold text-blue-600">$600.000 <small
+                                class="text-xs text-gray-400 font-normal uppercase">COP</small></div>
+                    </div>
+                    <i class="fas fa-hard-hat text-gray-100 text-5xl"></i>
+                </div>
+            </article>
+
+            <!-- Odontología -->
+            <article
+                class="bg-white p-6 md:p-8 rounded-3xl shadow-lg border-t-8 border-teal-500 card-hover flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center mb-6 text-teal-500">
+                        <i class="fas fa-tooth text-4xl mr-4"></i>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Clínica Odontológica</h2>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic border-l-4 border-gray-100 pl-4">Enfoque en confianza, estética
+                        dental y conversión de pacientes.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Catálogo de servicios y especialidades médicas.</span>
+                        </li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Sección de testimonios y "Antes y Después".</span>
+                        </li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Botón flotante de WhatsApp para agendamiento.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-gray-50 flex justify-between items-end">
+                    <div>
+                        <span class="text-[10px] uppercase text-gray-400 font-bold tracking-widest block">Inversión
+                            Desarrollo</span>
+                        <div class="text-sm text-gray-400 line-through">$800.000</div>
+                        <div class="text-3xl font-bold text-teal-600">$600.000 <small
+                                class="text-xs text-gray-400 font-normal uppercase">COP</small></div>
+                    </div>
+                    <i class="fas fa-stethoscope text-gray-100 text-5xl"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Resumen de Inversión Desarrollo -->
+        <div class="bg-slate-900 text-white rounded-3xl p-8 mb-16 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 opacity-10">
+                <i class="fas fa-file-invoice-dollar text-9xl"></i>
+            </div>
+            <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-2">Inversión Total por Desarrollo (2 Sitios)</h3>
+                    <p class="text-slate-400">Precio regular: <span class="line-through">$1.600.000</span>. Pago único
+                        inicial.</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="text-sm font-bold text-blue-400 uppercase mb-1">Oferta por tiempo limitado</div>
+                    <div class="text-5xl font-black text-white tracking-tighter">$1.200.000</div>
+                    <div class="text-sm font-bold text-slate-500 mt-1 uppercase">Pesos Colombianos (COP)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cláusula de Hosting y Dominio -->
+        <section class="bg-white rounded-3xl p-6 md:p-12 mb-16 border border-gray-200 shadow-sm">
+            <div class="flex flex-col lg:flex-row items-start gap-12">
+                <div class="lg:w-1/2">
+                    <svg class="h-10 mb-8" viewBox="0 0 445 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M57.4 0.100098C25.8 0.100098 0.100098 25.8001 0.100098 57.4001V79.9001H21.5V57.4001C21.5 37.6001 37.6 21.5001 57.4 21.5001C77.2 21.5001 93.3 37.6001 93.3 57.4001V79.9001H114.7V57.4001C114.7 25.8001 89 0.100098 57.4 0.100098Z"
+                            fill="#673DE6" />
+                        <rect x="136" y="24" width="20" height="56" fill="#673DE6" />
+                        <circle cx="146" cy="8" r="8" fill="#673DE6" />
+                        <text x="170" y="65" font-family="Arial" font-weight="bold" font-size="60"
+                            fill="#1e293b">Hostinger</text>
+                    </svg>
+
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900">Infraestructura Tecnológica</h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Implementamos su web sobre los servidores de alta velocidad de <strong>Hostinger</strong>,
+                        asegurando una carga instantánea en cualquier parte del mundo.
+                    </p>
+
+                    <div class="warning-box p-6 md:p-8 rounded-2xl border-l-8 border-yellow-500 shadow-inner">
+                        <h4 class="font-bold text-yellow-800 mb-4 flex items-center uppercase tracking-tight text-lg">
+                            <i class="fas fa-exclamation-circle mr-3"></i> Cláusula Obligatoria de Dominio
+                        </h4>
+                        <div class="space-y-4 text-yellow-900">
+                            <p>El costo del <strong>Dominio (.com/.co) y Hosting</strong> por el primer año debe ser
+                                cubierto por el cliente para garantizar la propiedad legal y autonomía total de su
+                                marca.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full bg-slate-50 p-8 rounded-3xl">
+                    <h3 class="font-bold text-xl mb-6 text-gray-800 border-b border-gray-200 pb-4">¿Qué incluye este
+                        valor?</h3>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4"><i class="fas fa-mobile-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <span class="font-bold block">Diseño Adaptable</span>
+                                <span class="text-sm text-gray-500">Perfecto en iPhone, Android y Tablets.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4"><i
+                                    class="fas fa-search-location text-blue-600"></i></div>
+                            <div>
+                                <span class="font-bold block">Indexación Google 2026</span>
+                                <span class="text-sm text-gray-500">Alta en buscadores desde el día 1.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4"><i
+                                    class="fas fa-user-shield text-blue-600"></i></div>
+                            <div>
+                                <span class="font-bold block">Certificado SSL</span>
+                                <span class="text-sm text-gray-500">Sitio seguro con candado de confianza.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4"><i class="fas fa-tools text-blue-600"></i>
+                            </div>
+                            <div>
+                                <span class="font-bold block">Soporte 2026</span>
+                                <span class="text-sm text-gray-500">Garantía técnica por tiempo limitado.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div
+                        class="mt-10 p-4 bg-white rounded-xl text-[11px] text-gray-400 uppercase tracking-widest text-center border border-gray-100">
+                        Excluye correos corporativos y edición de contenido mensual.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cronograma simplificado -->
+        <div class="text-center mb-16">
+            <h2 class="text-2xl font-bold mb-12 text-gray-800 uppercase tracking-[0.2em]">Fases de Implementación</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="relative p-8 bg-white rounded-3xl shadow-sm border border-gray-100 card-hover">
+                    <div
+                        class="bg-blue-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-6 font-bold shadow-lg transform -rotate-3">
+                        1</div>
+                    <h4 class="font-bold mb-2">Legalidad</h4>
+                    <p class="text-gray-500 text-sm">Adquisición del dominio y hosting oficial.</p>
+                </div>
+                <div class="relative p-8 bg-white rounded-3xl shadow-sm border border-gray-100 card-hover">
+                    <div
+                        class="bg-blue-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-6 font-bold shadow-lg transform rotate-3">
+                        2</div>
+                    <h4 class="font-bold mb-2">Construcción</h4>
+                    <p class="text-gray-500 text-sm">Diseño de interfaces para Ingeniería y Odontología.</p>
+                </div>
+                <div class="relative p-8 bg-white rounded-3xl shadow-sm border border-gray-100 card-hover">
+                    <div
+                        class="bg-blue-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-6 font-bold shadow-lg transform -rotate-3">
+                        3</div>
+                    <h4 class="font-bold mb-2">Google SEO</h4>
+                    <p class="text-gray-500 text-sm">Validación de propiedad e indexación total.</p>
+                </div>
+                <div class="relative p-8 bg-white rounded-3xl shadow-sm border border-gray-100 card-hover">
+                    <div
+                        class="bg-blue-600 text-white w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-6 font-bold shadow-lg transform rotate-3">
+                        4</div>
+                    <h4 class="font-bold mb-2">Lanzamiento</h4>
+                    <p class="text-gray-500 text-sm">Pruebas en móviles y entrega oficial de accesos.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-white py-16 px-6 text-center">
+        <div class="max-w-2xl mx-auto">
+            <p class="text-slate-400 mb-8 leading-loose">Esta propuesta técnica y económica tiene una validez de 15 días
+                calendario a partir de febrero de 2026.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="window.print()"
+                    class="bg-white text-slate-900 px-10 py-4 rounded-full font-bold hover:bg-blue-400 hover:text-white transition-all shadow-xl flex items-center justify-center">
+                    <i class="fas fa-file-pdf mr-3"></i> Imprimir / Guardar Propuesta
+                </button>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-800 text-[10px] text-slate-600 uppercase tracking-widest">
+                Desarrollado bajo estándares web 2026
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
