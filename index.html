@@ -417,22 +417,29 @@
 
     <script>
         function downloadPDF() {
+            window.scrollTo(0, 0);
             const element = document.body;
             const opt = {
                 margin: 0,
                 filename: 'Propuesta_Shuh3n_Santiago_Orozco.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
+                html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
             };
 
-            // Hide the button during PDF generation to make it look cleaner
+            // Hide button and fix styles for PDF generation
             const btn = document.getElementById('downloadBtn');
+            const hero = document.querySelector('.hero-section');
+
             btn.style.display = 'none';
+            // Temporarily disable parallax for correct rendering
+            const originalBackgroundAttachment = hero.style.backgroundAttachment;
+            hero.style.backgroundAttachment = 'scroll';
 
             html2pdf().set(opt).from(element).save().then(() => {
-                // Show the button again
+                // Restore styles
                 btn.style.display = 'flex';
+                hero.style.backgroundAttachment = originalBackgroundAttachment;
             });
         }
 
