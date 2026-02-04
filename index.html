@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta de Desarrollo Web - Landing Pages Profesionales 2026</title>
+    <title>Propuesta de Desarrollo Web - Shuh3n Santiago Orozco 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
@@ -340,9 +341,9 @@
             <p class="text-slate-400 mb-8 leading-loose">Esta propuesta técnica y económica tiene una validez de 15 días
                 calendario a partir de febrero de 2026.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="window.print()"
+                <button id="downloadBtn" onclick="downloadPDF()"
                     class="bg-white text-slate-900 px-10 py-4 rounded-full font-bold hover:bg-blue-400 hover:text-white transition-all shadow-xl flex items-center justify-center">
-                    <i class="fas fa-file-pdf mr-3"></i> Imprimir / Guardar Propuesta
+                    <i class="fas fa-file-pdf mr-3"></i> Descargar Propuesta PDF
                 </button>
             </div>
             <div class="mt-12 pt-8 border-t border-slate-800 text-[10px] text-slate-600 uppercase tracking-widest">
@@ -350,6 +351,28 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function downloadPDF() {
+            const element = document.body;
+            const opt = {
+                margin: 0,
+                filename: 'Propuesta_Shuh3n_Santiago_Orozco.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            // Hide the button during PDF generation to make it look cleaner
+            const btn = document.getElementById('downloadBtn');
+            btn.style.display = 'none';
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Show the button again
+                btn.style.display = 'flex';
+            });
+        }
+    </script>
 
 </body>
 
